@@ -1,0 +1,114 @@
+<%= form_with scope: :bloodtest, url: bloodtests_path, local: true do |form| %>
+
+  <% if @bloodtest.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@bloodtest.errors.count, "error") %> prohibited
+        this bloodtest from being saved:
+      </h2>
+      <ul>
+        <% @bloodtest.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>  
+
+
+  <p>
+    <%= form.label :Leukocyty %> <%= form.text_field  :leukocyty %>
+  </p>
+ 
+  <p>
+    <%= form.label :Erytrocyty %> <%= form.text_field  :erytrocyty %>
+  </p>
+
+  <p>
+    <%= form.label :Hemoglobina %> <%= form.text_field  :hemoglobina %>
+  </p>
+
+  <p>
+    <%= form.label :Hematokryt %> <%= form.text_field  :hematokryt %>
+  </p>
+
+  <p>
+    <%= form.label :MCV %> <%= form.text_field  :mcv %> 
+  </p>
+
+  <p>
+    <%= form.label :MCH %> <%= form.text_field  :mch %> 
+  </p>
+
+  <p>
+    <%= form.label :MCHC %> <%= form.text_field  :mchc %> 
+  </p>
+
+  <p>
+    <%= form.label :"Płytki krwi" %> <%= form.text_field  :'plytki_krwi' %> 
+  </p>
+
+  <p>
+    <%= form.label :'RDW-SD' %> <%= form.text_field  :'rdw_sd' %> 
+  </p>
+
+  <p>
+    <%= form.label :'RDW-CV' %> <%= form.text_field  :'rdw_cv' %> 
+  </p>
+
+  <p>
+    <%= form.label :PDW %> <%= form.text_field  :pdw %> 
+  </p>
+
+  <p>
+    <%= form.label :MPV %> <%= form.text_field  :mpv %> 
+  </p>
+
+  <p>
+    <%= form.label :'P-LCR' %> <%= form.text_field  :'p_lcr' %> 
+  </p>
+
+  <p>
+    <%= form.label :PCT %> <%= form.text_field  :pct %> 
+  </p>
+
+  <p>
+    <%= form.label :Neutrofile %> <%= form.text_field  :neutrofile %> 
+  </p>
+
+  <p>
+    <%= form.label :Limfocyty %> <%= form.text_field  :limfocyty %> 
+  </p>
+
+  <p>
+    <%= form.label :Monocyty %> <%= form.text_field  :monocyty %> 
+  </p>
+
+  <p>
+    <%= form.label :Eozynofile %> <%= form.text_field  :eozynofile %> 
+  </p>
+
+  <p>
+    <%= form.label :Bazofile %> <%= form.text_field  :bazofile %> 
+  </p>
+
+  <p>
+    <%= form.label :Ferrytyna %> <%= form.text_field  :ferrytyna %> 
+  </p>
+
+  <p>
+    <%= form.label :TSH %> <%= form.text_field  :tsh %> 
+  </p>
+
+  <p>
+    <%= form.label :FT3 %> <%= form.text_field  :ft3 %> 
+  </p>
+
+  <p>
+    <%= form.label :FT4 %> <%= form.text_field  :ft4 %> 
+  </p>
+
+ 
+  <p>
+    <%= form.submit :Analizuj %>
+  </p>
+<% end %>

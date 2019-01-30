@@ -1,0 +1,362 @@
+<p>Wyniki użytkownika <%= link_to @bloodtest.user.name, @bloodtest.user %></p>
+
+<table>
+  <tr>
+    <th>Nazwa:</th>
+    <th>Ilość:</th>
+    <th>Możliwa choroba:</th>
+    <th>Więcej info:</th>
+  </tr>
+  <tr>
+    <td><b>Leukocyty:</b></td>
+    <td><%= @bloodtest.leukocyty %></td>
+    <% if @bloodtest.leukocyty < @norms.leukocyty_n_d %>
+      <td><%= @advices.leukocyty_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.leukocyty_n_d %>
+    <% elsif @bloodtest.leukocyty > @norms.leukocyty_n_g %>
+      <td><%= @advices.leukocyty_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.leukocyty_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <%end%>  
+  </tr>
+
+  <tr>
+    <td><b>Erytrocyty:</b></td>
+    <td><%= @bloodtest.erytrocyty %></td>
+    <% if @bloodtest.erytrocyty < @norms.erytrocyty_n_d %>
+      <td><%= @advices.erytrocyty_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.erytrocyty_n_d %>
+    <% elsif @bloodtest.erytrocyty > @norms.erytrocyty_n_g %>
+      <td><%= @advices.erytrocyty_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.erytrocyty_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Hemoglobina:</b></td>
+    <td><%= @bloodtest.hemoglobina %></td>
+    <% if @bloodtest.hemoglobina < @norms.hemoglobina_n_d %>
+      <td><%= @advices.hemoglobina_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.hemoglobina_n_d %>
+    <% elsif @bloodtest.hemoglobina > @norms.hemoglobina_n_g %>
+      <td><%= @advices.hemoglobina_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.hemoglobina_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Hematokryt:</b></td>
+    <td><%= @bloodtest.hematokryt %></td>
+    <% if @bloodtest.hematokryt < @norms.hematokryt_n_d %>
+      <td><%= @advices.hematokryt_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.hematokryt_n_d %>
+    <% elsif @bloodtest.hematokryt > @norms.hematokryt_n_g %>
+      <td><%= @advices.hematokryt_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.hematokryt_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>MCV:</b></td>
+    <td><%= @bloodtest.mcv %></td>
+    <% if @bloodtest.mcv < @norms.mcv_n_d %>
+      <td><%= @advices.mcv_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.mcv_n_d %>
+    <% elsif @bloodtest.mcv > @norms.mcv_n_g %>
+      <td><%= @advices.mcv_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.mcv_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>MCH:</b></td>
+    <td><%= @bloodtest.mch %></td>
+    <% if @bloodtest.mch < @norms.mch_n_d %>
+      <td><%= @advices.mch_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.mch_n_d %>
+    <% elsif @bloodtest.mch > @norms.mch_n_g %>
+      <td><%= @advices.mch_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.mch_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>MCHC:</b></td>
+    <td><%= @bloodtest.mchc %></td>
+    <% if @bloodtest.mchc < @norms.mchc_n_d %>
+      <td><%= @advices.mchc_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.mchc_n_d %>
+    <% elsif @bloodtest.mchc > @norms.mchc_n_g %>
+      <td><%= @advices.mchc_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.mchc_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Plytki krwi:</b></td>
+    <td><%= @bloodtest.plytki_krwi %></td>
+    <% if @bloodtest.plytki_krwi < @norms.plytki_krwi_n_d %>
+      <td><%= @advices.plytki_krwi_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.plytki_krwi_n_d %>
+    <% elsif @bloodtest.plytki_krwi > @norms.plytki_krwi_n_g %>
+      <td><%= @advices.plytki_krwi_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.plytki_krwi_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>RDW-SD:</b></td>
+    <td><%= @bloodtest.rdw_sd %></td>
+    <% if @bloodtest.rdw_sd < @norms.rdw_sd_n_d %>
+      <td><%= @advices.rdw_sd_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.rdw_sd_n_d %>
+    <% elsif @bloodtest.rdw_sd > @norms.rdw_sd_n_g %>
+      <td><%= @advices.rdw_sd_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.rdw_sd_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>RDW-CV:</b></td>
+    <td><%= @bloodtest.rdw_cv %></td>
+    <% if @bloodtest.rdw_cv < @norms.rdw_cv_n_d %>
+      <td><%= @advices.rdw_cv_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.rdw_cv_n_d %>
+    <% elsif @bloodtest.rdw_cv > @norms.rdw_cv_n_g %>
+      <td><%= @advices.rdw_cv_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.rdw_cv_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>PDW:</b></td>
+    <td><%= @bloodtest.pdw %></td>
+    <% if @bloodtest.pdw < @norms.pdw_n_d %>
+      <td><%= @advices.pdw_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.pdw_n_d %>
+    <% elsif @bloodtest.pdw > @norms.pdw_n_g %>
+      <td><%= @advices.pdw_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.pdw_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>MPV:</b></td>
+    <td><%= @bloodtest.mpv %></td>
+    <% if @bloodtest.mpv < @norms.mpv_n_d %>
+      <td><%= @advices.mpv_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.mpv_n_d %>
+    <% elsif @bloodtest.mpv > @norms.mpv_n_g %>
+      <td><%= @advices.mpv_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.mpv_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>P-LCR:</b></td>
+    <td><%= @bloodtest.p_lcr %></td>
+    <% if @bloodtest.p_lcr < @norms.p_lcr_n_d %>
+      <td><%= @advices.p_lcr_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.p_lcr_n_d %>
+    <% elsif @bloodtest.p_lcr > @norms.p_lcr_n_g %>
+      <td><%= @advices.p_lcr_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.p_lcr_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>PCT:</b></td>
+    <td><%= @bloodtest.pct %></td>
+    <% if @bloodtest.pct < @norms.pct_n_d %>
+      <td><%= @advices.pct_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.pct_n_d %>
+    <% elsif @bloodtest.pct > @norms.pct_n_g %>
+      <td><%= @advices.pct_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.pct_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Neutrofile:</b></td>
+    <td><%= @bloodtest.neutrofile %></td>
+    <% if @bloodtest.neutrofile < @norms.neutrofile_n_d %>
+      <td><%= @advices.neutrofile_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.neutrofile_n_d %>
+    <% elsif @bloodtest.neutrofile > @norms.neutrofile_n_g %>
+      <td><%= @advices.neutrofile_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.neutrofile_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Limfocyty:</b></td>
+    <td><%= @bloodtest.limfocyty %></td>
+    <% if @bloodtest.limfocyty < @norms.limfocyty_n_d %>
+      <td><%= @advices.limfocyty_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.limfocyty_n_d %>
+    <% elsif @bloodtest.limfocyty > @norms.limfocyty_n_g %>
+      <td><%= @advices.limfocyty_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.limfocyty_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Monocyty:</b></td>
+    <td><%= @bloodtest.monocyty %></td>
+    <% if @bloodtest.monocyty < @norms.monocyty_n_d %>
+      <td><%= @advices.monocyty_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.monocyty_n_d %>
+    <% elsif @bloodtest.monocyty > @norms.monocyty_n_g %>
+      <td><%= @advices.monocyty_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.monocyty_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Eozynofile:</b></td>
+    <td><%= @bloodtest.eozynofile %></td>
+    <% if @bloodtest.eozynofile < @norms.eozynofile_n_d %>
+      <td><%= @advices.eozynofile_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.eozynofile_n_d %>
+    <% elsif @bloodtest.eozynofile > @norms.eozynofile_n_g %>
+      <td><%= @advices.eozynofile_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.eozynofile_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Bazofile:</b></td>
+    <td><%= @bloodtest.bazofile %></td>
+    <% if @bloodtest.bazofile < @norms.bazofile_n_d %>
+      <td><%= @advices.bazofile_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.bazofile_n_d %>
+    <% elsif @bloodtest.bazofile > @norms.bazofile_n_g %>
+      <td><%= @advices.bazofile_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.bazofile_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>Ferrytyna:</b></td>
+    <td><%= @bloodtest.ferrytyna %></td>
+    <% if @bloodtest.ferrytyna < @norms.ferrytyna_n_d %>
+      <td><%= @advices.ferrytyna_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.ferrytyna_n_d %>
+    <% elsif @bloodtest.ferrytyna > @norms.ferrytyna_n_g %>
+      <td><%= @advices.ferrytyna_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.ferrytyna_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>TSH:</b></td>
+    <td><%= @bloodtest.tsh %></td>
+    <% if @bloodtest.tsh < @norms.tsh_n_d %>
+      <td><%= @advices.tsh_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.tsh_n_d %>
+    <% elsif @bloodtest.tsh > @norms.tsh_n_g %>
+      <td><%= @advices.tsh_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.tsh_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>FT3:</b></td>
+    <td><%= @bloodtest.ft3 %></td>
+    <% if @bloodtest.ft3 < @norms.ft3_n_d %>
+      <td><%= @advices.ft3_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.ft3_n_d %>
+    <% elsif @bloodtest.ft3 > @norms.ft3_n_g %>
+      <td><%= @advices.ft3_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.ft3_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td><b>FT4:</b></td>
+    <td><%= @bloodtest.ft4 %></td>
+    <% if @bloodtest.ft4 < @norms.ft4_n_d %>
+      <td><%= @advices.ft4_n_d %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.ft4_n_d %>
+    <% elsif @bloodtest.ft4 > @norms.ft4_n_g %>
+      <td><%= @advices.ft4_n_g %></td>
+      <td><%= link_to "Więcej pod adresem", @advices2.ft4_n_g %>
+    <% else %>
+      <td> Wszystko ok. </td>
+      <td> </td>
+    <% end %>
+  </tr>
+</table>
+
+<%= link_to 'Edytuj wyniki', edit_bloodtest_path(@bloodtest) %>
+<br>
+<%= link_to 'Usuń wyniki', bloodtest_path(@bloodtest),
+              method: :delete,
+              data: { confirm: 'Jesteś pewien?' } %>
+<br>
+<%= link_to 'Przejdź do listy wyników', bloodtests_path %>

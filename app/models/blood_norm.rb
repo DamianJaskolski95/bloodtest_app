@@ -1,0 +1,2 @@
+class BloodNorm < ApplicationRecord
+end

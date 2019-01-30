@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testy krwi</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+    <!-- Milligram CSS minified -->
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+  </head>
+
+  <body>
+    <header>
+      <% if current_user && current_user.rola == 2%>
+        <font size ="+2">Hi <%= current_user.name %></font>
+        |
+        <font size ="+2"><%= link_to 'Ustawienia', user_path(current_user.id)%></font>
+        |
+        <font size ="+2"><%= link_to 'Użytkownicy', users_path%></font>
+        |
+        <font size ="+2"><%= link_to 'Baza testów', bloodtests_path%></font>
+        |
+        <font size ="+2"><%= link_to 'Wyloguj', logout_path, method: :delete %></font>
+        <span></span>
+
+      <% elsif current_user %>
+        <font size ="+2">Hi <%= current_user.name %></font>
+        |
+        <font size ="+2"><%= link_to 'Twoje wyniki', bloodtests_path%></font>
+        |
+        <font size ="+2"><%= link_to 'Nowy test', new_bloodtest_path%></font>
+        |
+        <font size ="+2"><%= link_to 'Ustawienia', user_path(current_user.id)%></font>
+        |
+        <font size ="+2"><%= link_to 'Wyloguj', logout_path, method: :delete %></font>
+        <hr>
+
+      <% else %>
+        <font size ="+2"><%= link_to 'Zaloguj', login_path %></font>
+        |
+        <font size ="+2"><%= link_to 'Zarejestruj', new_user_path %></font>
+        <hr>
+      <% end %>
+    </header>
+
+    <%= yield %>
+  </body>
+</html>

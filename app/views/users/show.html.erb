@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Email</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @user.name %></td>
+      <td><%= @user.email %></td>
+    </tr>
+  </tbody>
+</table>
+
+<% if current_user.rola == 2%>
+  <%= link_to 'Przejdz do wyników tego użytkownika', controller: 'bloodtests', action: 'showuser' %>
+  <br>
+<% else %>
+  <%= link_to 'Przejdz do swoich wyników', controller: 'bloodtests' %>
+  <br>
+  <%= link_to 'Wprowadz nowe wyniki', controller: 'bloodtests', action: 'new' %>
+  <br>
+<%end%>
+
+<% if current_user.rola == 2 %>
+  <%= link_to 'Edytuj', edit_user_path(@user) %> |
+  <%= link_to 'Wróć', users_path %> |
+  <%= link_to 'Usuń', @user, method: :delete, data: { confirm: 'Jesteś pewien?' } %>
+<% else %>
+  <%= link_to 'Edytuj', edit_user_path(@user) %> |
+  <%= link_to 'Usuń', @user, method: :delete, data: { confirm: 'Jesteś pewien?' } %>
+<% end %>

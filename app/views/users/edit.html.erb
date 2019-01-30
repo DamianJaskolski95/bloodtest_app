@@ -1,0 +1,10 @@
+<h1>Editing User</h1>
+
+<%= render 'form', user: @user %>
+
+<% if current_user.rola == 2 %>
+  <%= link_to 'Pokaż', @user %> |
+  <%= link_to 'Wróć', users_path %>
+<% else %>
+  <%= link_to 'Wróć', @user %>
+<% end %>

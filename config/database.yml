@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: blood_test_app
+  pool: 5
+  username: rails
+  password: rails

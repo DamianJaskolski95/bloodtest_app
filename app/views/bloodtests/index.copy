@@ -1,0 +1,185 @@
+<table>
+  <tr>
+    <th colspan="3"></th>
+    <th>Leukocyty</th>
+    <th>Erytrocyty</th>
+    <th>Hemoglobina</th>
+    <th>Hematokryt</th>
+    <th>MCV</th>
+    <th>MCH</th>
+    <th>MCHC</th>
+    <th>Plytki krwi</th>
+    <th>RDW-SD</th>
+    <th>RDW-CV</th>
+    <th>PDW</th>
+  </tr>
+ 
+  <% @bloodtests.each do |bloodtest| %>
+    <% if @user == bloodtest.user %>
+      <tr>
+        <td><%= link_to 'P', bloodtest_path(bloodtest) %></td>
+        <td><%= link_to 'E', edit_bloodtest_path(bloodtest) %></td>
+        <td><%= link_to 'U', bloodtest_path(bloodtest),
+                method: :delete,
+                data: { confirm: 'Jesteś pewien?' } %></td>
+        <%if @norms.leukocyty_n_d > bloodtest.leukocyty || @norms.leukocyty_n_g < bloodtest.leukocyty %>
+          <td><b><%= bloodtest.leukocyty %><b></td>
+        <%else%>
+          <td><%= bloodtest.leukocyty %></td>
+        <%end%>
+
+        <%if @norms.erytrocyty_n_d > bloodtest.erytrocyty || @norms.erytrocyty_n_g < bloodtest.erytrocyty %>
+          <td><b><%= bloodtest.erytrocyty %></b></td>
+        <%else%>
+          <td><%= bloodtest.erytrocyty %></td>
+        <%end%>
+
+        <%if @norms.hemoglobina_n_d > bloodtest.hemoglobina || @norms.hemoglobina_n_g < bloodtest.hemoglobina %>
+          <td><b><%= bloodtest.hemoglobina %><b></td>
+        <%else%>
+          <td><%= bloodtest.hemoglobina %></td>
+        <%end%>
+
+        <%if @norms.hematokryt_n_d > bloodtest.hematokryt || @norms.hematokryt_n_g < bloodtest.hematokryt %>
+          <td><b><%= bloodtest.hematokryt %><b></td>
+        <%else%>
+          <td><%= bloodtest.hematokryt %></td>
+        <%end%>
+
+        <%if @norms.mcv_n_d > bloodtest.mcv || @norms.mcv_n_g < bloodtest.mcv %>
+          <td><b><%= bloodtest.mcv %><b></td>
+        <%else%>
+          <td><%= bloodtest.mcv %></td>
+        <%end%>
+
+        <%if @norms.mch_n_d > bloodtest.mch || @norms.mch_n_g < bloodtest.mch %>
+          <td><b><%= bloodtest.mch %><b></td>
+        <%else%>
+          <td><%= bloodtest.mch %></td>
+        <%end%>
+
+        <%if @norms.mchc_n_d > bloodtest.mchc || @norms.mchc_n_g < bloodtest.mchc %>
+          <td><b><%= bloodtest.mchc %><b></td>
+        <%else%>
+          <td><%= bloodtest.mchc %></td>
+        <%end%>
+
+        <%if @norms.plytki_krwi_n_d > bloodtest.plytki_krwi || @norms.plytki_krwi_n_g < bloodtest.plytki_krwi %>
+          <td><b><%= bloodtest.plytki_krwi %><b></td>
+        <%else%>
+          <td><%= bloodtest.plytki_krwi %></td>
+        <%end%>
+
+        <%if @norms.rdw_sd_n_d > bloodtest.rdw_sd || @norms.rdw_sd_n_g < bloodtest.rdw_sd %>
+          <td><b><%= bloodtest.rdw_sd %><b></td>
+        <%else%>
+          <td><%= bloodtest.rdw_sd %></td>
+        <%end%>
+
+        <%if @norms.rdw_cv_n_d > bloodtest.rdw_cv || @norms.rdw_cv_n_g < bloodtest.rdw_cv %>
+          <td><b><%= bloodtest.rdw_cv %><b></td>
+        <%else%>
+          <td><%= bloodtest.rdw_cv %></td>
+        <%end%>
+
+        <%if @norms.pdw_n_d > bloodtest.pdw || @norms.pdw_n_g < bloodtest.pdw %>
+          <td><b><%= bloodtest.pdw %><b></td>
+        <%else%>
+          <td><%= bloodtest.pdw %></td>
+        <%end%>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+
+<br><br>
+
+<table>
+  <tr>
+    <th colspan="3"></th>
+    <th>MPV</th>
+    <th>P-LCR</th> 
+    <th>PCT</th>
+    <th>Neutrofile</th>
+    <th>Limfocyty</th>
+    <th>Monocyty</th>
+    <th>Eozynofile</th>
+    <th>Bazofile</th>
+    <th>Ferrytyna</th>
+    <th>TSH</th>
+    <th>FT3</th>
+    <th>FT4</th>    
+  </tr>
+ 
+  <% @bloodtests.each do |bloodtest| %>
+    <% if @user == bloodtest.user%>
+      <tr>
+        <td><%= link_to 'P', bloodtest_path(bloodtest) %></td>
+        <td><%= link_to 'E', edit_bloodtest_path(bloodtest) %></td>
+        <td><%= link_to 'U', bloodtest_path(bloodtest),
+                method: :delete,
+                data: { confirm: 'Jesteś pewien?' } %></td>
+        <%if @norms.mpv_n_d > bloodtest.mpv || @norms.mpv_n_g < bloodtest.mpv %>
+          <td><b><%= bloodtest.mpv %><b></td>
+        <%else%>
+          <td><%= bloodtest.mpv %></td>
+        <%end%>
+        <%if @norms.p_lcr_n_d > bloodtest.p_lcr || @norms.p_lcr_n_g < bloodtest.p_lcr %>
+          <td><b><%= bloodtest.p_lcr %><b></td>
+        <%else%>
+          <td><%= bloodtest.p_lcr %></td>
+        <%end%>
+        <%if @norms.pct_n_d > bloodtest.pct || @norms.pct_n_g < bloodtest.pct %>
+          <td><b><%= bloodtest.pct %><b></td>
+        <%else%>
+          <td><%= bloodtest.pct %></td>
+        <%end%>
+        <%if @norms.neutrofile_n_d > bloodtest.neutrofile || @norms.neutrofile_n_g < bloodtest.neutrofile %>
+          <td><b><%= bloodtest.neutrofile %><b></td>
+        <%else%>
+          <td><%= bloodtest.neutrofile %></td>
+        <%end%>
+        <%if @norms.limfocyty_n_d > bloodtest.limfocyty || @norms.limfocyty_n_g < bloodtest.limfocyty %>
+          <td><b><%= bloodtest.limfocyty %><b></td>
+        <%else%>
+          <td><%= bloodtest.limfocyty %></td>
+        <%end%>
+        <%if @norms.monocyty_n_d > bloodtest.monocyty || @norms.monocyty_n_g < bloodtest.monocyty %>
+          <td><b><%= bloodtest.monocyty %><b></td>
+        <%else%>
+          <td><%= bloodtest.monocyty %></td>
+        <%end%>
+        <%if @norms.eozynofile_n_d > bloodtest.eozynofile || @norms.eozynofile_n_g < bloodtest.eozynofile %>
+          <td><b><%= bloodtest.eozynofile %><b></td>
+        <%else%>
+          <td><%= bloodtest.eozynofile %></td>
+        <%end%>
+        <%if @norms.bazofile_n_d > bloodtest.bazofile || @norms.bazofile_n_g < bloodtest.bazofile %>
+          <td><b><%= bloodtest.bazofile %><b></td>
+        <%else%>
+          <td><%= bloodtest.bazofile %></td>
+        <%end%>
+        <%if @norms.ferrytyna_n_d > bloodtest.ferrytyna || @norms.ferrytyna_n_g < bloodtest.ferrytyna %>
+          <td><b><%= bloodtest.ferrytyna %><b></td>
+        <%else%>
+          <td><%= bloodtest.ferrytyna %></td>
+        <%end%>
+        <%if @norms.tsh_n_d > bloodtest.tsh || @norms.tsh_n_g < bloodtest.tsh %>
+          <td><b><%= bloodtest.tsh %><b></td>
+        <%else%>
+          <td><%= bloodtest.tsh %></td>
+        <%end%>
+        <%if @norms.ft3_n_d > bloodtest.ft3 || @norms.ft3_n_g < bloodtest.ft3 %>
+          <td><b><%= bloodtest.ft3 %><b></td>
+        <%else%>
+          <td><%= bloodtest.ft3 %></td>
+        <%end%>
+        <%if @norms.ft4_n_d > bloodtest.ft4 || @norms.ft4_n_g < bloodtest.ft4 %>
+          <td><b><%= bloodtest.ft4 %><b></td>
+        <%else%>
+          <td><%= bloodtest.ft4 %></td>
+        <%end%> 
+      </tr>
+    <% end %>
+  <% end %>
+</table>

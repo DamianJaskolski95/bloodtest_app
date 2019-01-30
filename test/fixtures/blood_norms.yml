@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Erytrocyty_n: 1.5
+  Hemoglobina_n: 1.5
+  Hematokryt_n: 1.5
+  MCV_n: 1.5
+  MCH_n: 1.5
+  MCHC_n: 1.5
+  Plytki_krwi_n: 1.5
+  RDW_SD_n: 1.5
+  RDW_CV_n: 1.5
+  PDW_n: 1.5
+  MPV_n: 1.5
+  P_LCR_n: 1.5
+  PCT_n: 1.5
+  Neutrofile_n: 1.5
+  Limfocyty_n: 1.5
+  Monocyty_n: 1.5
+  Eozynofile_n: 1.5
+  Bazofile_n: 1.5
+  Ferrytyna_n: 1.5
+  TSH_n: 1.5
+  FT3_n: 1.5
+  FT4_n: 1.5
+
+two:
+  Erytrocyty_n: 1.5
+  Hemoglobina_n: 1.5
+  Hematokryt_n: 1.5
+  MCV_n: 1.5
+  MCH_n: 1.5
+  MCHC_n: 1.5
+  Plytki_krwi_n: 1.5
+  RDW_SD_n: 1.5
+  RDW_CV_n: 1.5
+  PDW_n: 1.5
+  MPV_n: 1.5
+  P_LCR_n: 1.5
+  PCT_n: 1.5
+  Neutrofile_n: 1.5
+  Limfocyty_n: 1.5
+  Monocyty_n: 1.5
+  Eozynofile_n: 1.5
+  Bazofile_n: 1.5
+  Ferrytyna_n: 1.5
+  TSH_n: 1.5
+  FT3_n: 1.5
+  FT4_n: 1.5

@@ -1,0 +1,52 @@
+class CreateBloodNorms < ActiveRecord::Migration[5.2]
+  def change
+    create_table :blood_norms do |t|
+      t.float :leukocyty_n_d, default: 0.0
+      t.float :erytrocyty_n_d, default: 0.0
+      t.float :hemoglobina_n_d, default: 0.0
+      t.float :hematokryt_n_d, default: 0.0
+      t.float :mcv_n_d, default: 0.0
+      t.float :mch_n_d, default: 0.0
+      t.float :mchc_n_d, default: 0.0
+      t.float :plytki_krwi_n_d, default: 0.0
+      t.float :rdw_sd_n_d, default: 0.0
+      t.float :rdw_cv_n_d, default: 0.0
+      t.float :pdw_n_d, default: 0.0
+      t.float :mpv_n_d, default: 0.0
+      t.float :p_lcr_n_d, default: 0.0
+      t.float :pct_n_d, default: 0.0
+      t.float :neutrofile_n_d, default: 0.0
+      t.float :limfocyty_n_d, default: 0.0
+      t.float :monocyty_n_d, default: 0.0
+      t.float :eozynofile_n_d, default: 0.0
+      t.float :bazofile_n_d, default: 0.0
+      t.float :ferrytyna_n_d, default: 0.0
+      t.float :tsh_n_d, default: 0.0
+      t.float :ft3_n_d, default: 0.0
+      t.float :ft4_n_d, default: 0.0
+      t.float :leukocyty_n_g, default: 0.0
+      t.float :erytrocyty_n_g, default: 0.0
+      t.float :hemoglobina_n_g, default: 0.0
+      t.float :hematokryt_n_g, default: 0.0
+      t.float :mcv_n_g, default: 0.0
+      t.float :mch_n_g, default: 0.0
+      t.float :mchc_n_g, default: 0.0
+      t.float :plytki_krwi_n_g, default: 0.0
+      t.float :rdw_sd_n_g, default: 0.0
+      t.float :rdw_cv_n_g, default: 0.0
+      t.float :pdw_n_g, default: 0.0
+      t.float :mpv_n_g, default: 0.0
+      t.float :p_lcr_n_g, default: 0.0
+      t.float :pct_n_g, default: 0.0
+      t.float :neutrofile_n_g, default: 0.0
+      t.float :limfocyty_n_g, default: 0.0
+      t.float :monocyty_n_g, default: 0.0
+      t.float :eozynofile_n_g, default: 0.0
+      t.float :bazofile_n_g, default: 0.0
+      t.float :ferrytyna_n_g, default: 0.0
+      t.float :tsh_n_g, default: 0.0
+      t.float :ft3_n_g, default: 0.0
+      t.float :ft4_n_g, default: 0.0
+    end
+  end
+end
