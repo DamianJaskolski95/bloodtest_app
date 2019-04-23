@@ -3,3 +3,6 @@ Simple RoR app for bloodtest. This is for a project at PWR. Only admin panel imp
 To add admin account, edit "us_role" to 2 for any added accout.
 
 UPDATE Users SET us_role = 2 WHERE id = 1;
+
+https://bloodtestpoorfront.herokuapp.com
+admin user: admin@admin.pl/admin
